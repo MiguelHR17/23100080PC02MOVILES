@@ -130,9 +130,30 @@ fun BlackjackScreen(viewModel: BlackjackViewModel) {
 
         // Mostrar cartas si existen
         if (uiState.playerCards.isNotEmpty()) {
+
+            Spacer(Modifier.height(24.dp))
+
+            // --- TÍTULO GENERAL ---
+            Text(
+                text = "Resultado de la ronda",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold
+            )
+
+            Spacer(Modifier.height(16.dp))
+
+            // --- SECCIÓN JUGADOR ---
+            Text(
+                text = "Jugador",
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.SemiBold
+            )
+
+            Spacer(Modifier.height(8.dp))
+
             Text(
                 text = "Tus cartas:",
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold
             )
 
@@ -146,13 +167,26 @@ fun BlackjackScreen(viewModel: BlackjackViewModel) {
                 }
             }
 
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
 
             Text(text = "Puntaje jugador: ${uiState.playerScore}")
-            Text(text = "Puntaje máquina: ${uiState.machineScore}")
+
+            Spacer(Modifier.height(24.dp))
+
+            // --- SECCIÓN MÁQUINA ---
+            Text(
+                text = "Máquina",
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.SemiBold
+            )
 
             Spacer(Modifier.height(8.dp))
 
+            Text(text = "Puntaje máquina: ${uiState.machineScore}")
+
+            Spacer(Modifier.height(24.dp))
+
+            // --- MENSAJE FINAL ---
             Text(
                 text = uiState.winnerMessage,
                 style = MaterialTheme.typography.titleLarge,
