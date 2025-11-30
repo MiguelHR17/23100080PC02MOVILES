@@ -56,4 +56,13 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    // Retrofit para llamadas HTTP
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    // ViewModel con corrutinas
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+
+    // Coil para mostrar imágenes de las cartas
+    implementation("io.coil-kt:coil-compose:2.7.0")
 }
